@@ -193,10 +193,27 @@ section{
 .section__text__p1{
     text-align: center;
 }
+
 .section__text__p2{
     font-size: 1.75rem;
-    margin-bottom: 1rem; ;
+    margin-bottom: 1rem; 
 }
+
+.section__text__p3{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+strong{
+    color: black;
+}
+
+.section__text__p3 strong {
+    color: black;
+}
+
 
 .title{
     font-size: 3rem;

@@ -6,8 +6,12 @@
     <title>My Portofolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
   </head>
-  <body>
+  <body data-scroll-container>
     <nav id="desktop-nav">
       <div class="logo">Web Portofolio</div>
       <div>
@@ -33,11 +37,22 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
+
+    <section id="profile" data-scroll-container>
       <div class="section__pic-container">
-        <img src="./assets/profilepic2.png" alt="Noval profile picture" />
+        <img
+          src="./assets/profilepic2.png"
+          alt="Noval profile picture"
+          data-scroll
+          data-scroll-speed="3"
+          data-scroll-direction="horizontal"    
+        />
       </div>
-      <div class="section__text">
+      <div
+        class="section__text"
+        data-scroll
+        data-scroll-speed="6"
+      >
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Noval Nabihan</h1>
         <p class="section__text__p2">Tech Enthusiast</p>
@@ -47,7 +62,7 @@
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
-        </button>
+          </button>
         </div>
         <div id="socials-container">
           <img
@@ -65,11 +80,29 @@
         </div>
       </div>
     </section>
+
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <p class="section__text__p3">Informatics student at <strong>Hasanuddin University</strong>, super into tech stuff! Currently focusing on learning programming and data exploration. Not much experience yet, but always eager to learn new things and ready to explore more through exciting projects in the world of technology.</p>
+      <p class="section__text__p3">
+        Informatics student at <strong>Hasanuddin University</strong>, super
+        into tech stuff! Currently focusing on learning programming and data
+        exploration. Not much experience yet, but always eager to learn new
+        things and ready to explore more through exciting projects in the world
+        of technology.
+      </p>
     </section>
+
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">Experience</h1>
+      <p class="section__text__p3">
+        still on progress
+      </p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

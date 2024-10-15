@@ -45,14 +45,10 @@
           alt="Noval profile picture"
           data-scroll
           data-scroll-speed="3"
-          data-scroll-direction="horizontal"    
+          data-scroll-direction="horizontal"
         />
       </div>
-      <div
-        class="section__text"
-        data-scroll
-        data-scroll-speed="6"
-      >
+      <div class="section__text" data-scroll data-scroll-speed="6">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Noval Nabihan</h1>
         <p class="section__text__p2">Tech Enthusiast</p>
@@ -82,6 +78,8 @@
     </section>
 
     <section id="about">
+      <h1 class="lerp"><span class="animated-text">Ceeeb</span></h1>
+      <!-- delete this -->
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <p class="section__text__p3">
@@ -93,16 +91,39 @@
       </p>
     </section>
 
-    <section id="about">
+    <section id="experience">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">Experience</h1>
-      <p class="section__text__p3">
-        still on progress
-      </p>
+      <p class="section__text__p3">still on progress</p>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const scroller = new LocomotiveScroll({
+          el: document.querySelector("[data-scroll-container]"),
+          smooth: true,
+          lerp: 0.05,
+        });
 
+        const $animatedText = $(".animated-text");
+        const text = $animatedText.text();
+        const chars = text.split("");
+
+        const spanText = chars
+          .map((letter, index) => {
+            return `<span data-scroll data-scroll-speed="1.5" data-scroll-delay="${
+              index * 0.03
+            }">${letter}</span>`;
+          })
+          .join("");
+
+        $animatedText.html(spanText);
+
+        scroller.update();
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -282,9 +282,20 @@ strong{
 }
 
 /* about section */
-
-/* #about{
-    display: flex;
+/* remove this*/
+.lerp{
     justify-content: center;
-    height: 80vh;
-} */
+    display: flex;
+    margin: 5rem;
+    font-size: 3rem;
+}
+
+.animated-text span {
+    display: inline-block;
+    transition: transform 0.1s ease;
+  }
+  
+  .animated-text span[data-scroll] {
+    transform: translateY(0);
+  }
+  
